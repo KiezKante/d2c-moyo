@@ -1,0 +1,44 @@
+{
+    "sections": {
+        "product_main": {
+            "type": "product_main"
+        },
+        "product_section_2": {
+            "type": "product_section_2"
+        },
+        "product_wide": {
+            "type": "product_wide"
+        },
+        "product_section_4": {
+            "type": "product_section_4"
+        },
+        "product_quote_1": {
+            "type": "product_quote_1"
+        },
+        "product_qa": {
+            "type": "product_qa"
+        },
+        "product_quote_2": {
+            "type": "product_quote_2"
+        },
+        "product_edition": {
+            "type": "product_edition"
+        },
+        "product_faq": {
+            "type": "product_faq"
+        }
+    },
+    "layout": "product",
+    "wrapper": "main#main.page_main",
+    "order": [
+        "product_main",
+        "product_section_2",
+        "product_wide",
+        "product_section_4",
+        "product_quote_1",
+        "product_qa",
+        "product_quote_2",
+        "product_edition",
+        "product_faq"
+    ]
+}

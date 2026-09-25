@@ -1,0 +1,79 @@
+<div class="u-container  ">
+          <div data-wf--layout--variant="stack-centered" class="u-layout-wrapper">
+            <div class="u-layout">
+              <div class="u-layout-column-1 w-variant-d69d5003-e9bc-b347-4e02-eb46976beb1c  ">
+                <div class="w-embed w-script"><span data-countdown=""></span>
+                  <script>
+(function () {
+  var TAG = 86400000;
+  /* Heute in Hamburger Zeit, nicht in der Zeitzone des Besuchers. */
+  function heute() {
+    var teile = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'Europe/Berlin', year: 'numeric', month: 'numeric', day: 'numeric'
+    }).formatToParts(new Date());
+    var d = {};
+    teile.forEach(function (t) { if (t.type !== 'literal') d[t.type] = parseInt(t.value, 10); });
+    return Date.UTC(d.year, d.month - 1, d.day);
+  }
+  /* Ohne Datum im Attribut: der n&auml;chste 24.12. */
+  function ziel(wert, jetzt) {
+    if (wert) {
+      var p = wert.split('-');
+      if (p.length === 3) return Date.UTC(+p[0], +p[1] - 1, +p[2]);
+    }
+    var jahr = new Date(jetzt).getUTCFullYear();
+    var ha = Date.UTC(jahr, 11, 24);
+    return jetzt > ha ? Date.UTC(jahr + 1, 11, 24) : ha;
+  }
+  function satz(tage, name) {
+    if (tage < 0) return '';
+    if (tage === 0) return 'Heute ist ' + name;
+    if (tage === 1) return 'Noch 1 Tag bis ' + name;
+    return 'Noch ' + tage + ' Tage bis ' + name;
+  }
+  function aktualisieren() {
+    var jetzt = heute();
+    document.querySelectorAll('[data-countdown]').forEach(function (el) {
+      var t = Math.round((ziel(el.getAttribute('data-countdown'), jetzt) - jetzt) / TAG);
+      el.textContent = satz(t, el.getAttribute('data-countdown-name') || 'Heiligabend');
+    });
+    document.querySelectorAll('[data-countdown-zahl]').forEach(function (el) {
+      var t = Math.round((ziel(el.getAttribute('data-countdown-zahl'), jetzt) - jetzt) / TAG);
+      el.textContent = t < 0 ? '' : String(t);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', aktualisieren);
+  aktualisieren();
+  setInterval(aktualisieren, 60000);
+})();
+</script>
+                </div>
+                <div data-number="30" data-wf--typography-heading--variant="h2" class="u-heading w-variant-433d40c6-c261-f13f-c899-61d2cadf150f w-richtext">
+                  <h2><strong>Für den einen Menschen, der Emotionen sucht.</strong></h2>
+                </div>
+                <div data-number="40" data-wf--typography-paragraph--variant="inherit" class="u-text u-rich-text w-richtext">
+                  <p>Fünf Motive, eine Stadt. Wenn du jemanden kennst, der Hamburg liebt oder vermisst, ist die Entscheidung eigentlich schon gefallen.</p>
+                </div>
+                <div data-wf--button-main--variant="link" data-trigger="hover focus" class="button_main_wrap w-variant-625d5df4-ad91-f7dc-9e2f-2e69f3fd7400">
+                  <div data-wf--clickable--variant="focus-ring-outside" class="clickable_wrap u-cover-absolute"><button type="button" aria-label="ZUR KOLLEKTION" class="clickable_btn"></button></div>
+                  <div data-button="" class="button_main_element w-variant-625d5df4-ad91-f7dc-9e2f-2e69f3fd7400">
+                    <div aria-hidden="true" class="button_main_text u-text-style-main u-weight-bold">[</div>
+                    <div aria-hidden="true" class="button_main_text u-text-style-main u-weight-bold">ZUR KOLLEKTION</div>
+                    <div aria-hidden="true" class="button_main_text u-text-style-main u-weight-bold">]</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Home Section 4",
+    "class": "u-section u-padding-top-pagetop u-padding-bottom-pagetop",
+    "presets": [
+        {
+            "name": "Home Section 4",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

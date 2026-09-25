@@ -1,0 +1,32 @@
+{
+    "sections": {
+        "home_intro": {
+            "type": "home_intro"
+        },
+        "home_hero": {
+            "type": "home_hero"
+        },
+        "home_edition": {
+            "type": "home_edition"
+        },
+        "home_section_2": {
+            "type": "home_section_2"
+        },
+        "home_section_3": {
+            "type": "home_section_3"
+        },
+        "home_section_4": {
+            "type": "home_section_4"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main#main.page_main",
+    "order": [
+        "home_intro",
+        "home_hero",
+        "home_edition",
+        "home_section_2",
+        "home_section_3",
+        "home_section_4"
+    ]
+}

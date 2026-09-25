@@ -1,0 +1,20 @@
+{
+    "sections": {
+        "artist_intro": {
+            "type": "artist_intro"
+        },
+        "artist_about": {
+            "type": "artist_about"
+        },
+        "artist_works": {
+            "type": "artist_works"
+        }
+    },
+    "layout": "page.der-kunstler",
+    "wrapper": "main#main.page_main",
+    "order": [
+        "artist_intro",
+        "artist_about",
+        "artist_works"
+    ]
+}

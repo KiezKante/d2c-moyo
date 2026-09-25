@@ -1,0 +1,275 @@
+<div class="u-embed-css w-embed">
+          <style>
+.tab_content_list:not([data-preview="true"]) > :not(.w-dyn-list,.u-display-contents),
+.tab_content_list:not([data-preview="true"]) > .w-dyn-list > * > * > *,
+.tab_content_list:not([data-preview="true"]) > .u-display-contents > .w-dyn-list > * > * > *,
+.tab_content_list:not([data-preview="true"]) > .u-display-contents > .u-display-contents > .w-dyn-list > * > * > *,
+.tab_content_list:not([data-preview="true"]) > .u-display-contents > :not(.w-dyn-list,.u-display-contents),
+.tab_content_list:not([data-preview="true"]) > .u-display-contents > .u-display-contents > :not(.w-dyn-list,.u-display-contents) {
+  display: none;
+}
+.tab_content_list > :first-child:not(.w-dyn-list,.u-display-contents),
+.tab_content_list > .w-dyn-list > * > :first-child > *,
+.tab_content_list > .u-display-contents > .w-dyn-list > * > :first-child > *,
+.tab_content_list > .u-display-contents > .u-display-contents > .w-dyn-list > * > :first-child > *,
+.tab_content_list > .u-display-contents > :not(.w-dyn-list,.u-display-contents):first-child,
+.tab_content_list > .u-display-contents > .u-display-contents > :not(.w-dyn-list,.u-display-contents):first-child {
+  display: block;
+}
+.wf-design-mode .tab_button_list > :first-child:not(.w-dyn-list,.u-display-contents),
+.wf-design-mode .tab_button_list > .w-dyn-list > * > :first-child > *,
+.wf-design-mode .tab_button_list > .u-display-contents > :first-child:not(.w-dyn-list,.u-display-contents),
+.wf-design-mode .tab_button_list > .u-display-contents > .u-display-contents > :first-child:not(.w-dyn-list,.u-display-contents),
+.wf-design-mode .tab_button_list > .u-display-contents > .w-dyn-list > * > :first-child > *,
+.wf-design-mode .tab_button_list > .u-display-contents > .u-display-contents > .w-dyn-list > * > :first-child > * {
+  --_state---true: 0;
+  --_state---false: 1;
+}
+.tab_button_list:has([data-wf--tab-link--variant="link"]) { gap: 0rem; }
+  @media (max-width: 991px) {
+  .hero_rail-item.is-active .hero_rail-label { opacity: 1; }
+}
+}
+</style>
+        </div>
+        <div class="tab_left is-hero">
+          <div data-slot="" role="tablist" class="tab_button_list is-hero">
+            <div class="hero_rail-item">
+              <div class="hero_rail-bar"></div>
+              <div class="hero_rail-num u-text-style-small">01</div>
+              <div class="hero_rail-label u-text-style-small">Hamburger Hafen</div>
+            </div>
+            <div class="hero_rail-item">
+              <div class="hero_rail-bar"></div>
+              <div class="hero_rail-num u-text-style-small">02</div>
+              <div class="hero_rail-label u-text-style-small">Hamburg, I Love You</div>
+            </div>
+            <div class="hero_rail-item">
+              <div class="hero_rail-bar"></div>
+              <div class="hero_rail-num u-text-style-small">03</div>
+              <div class="hero_rail-label u-text-style-small">Hamburg, I Miss You</div>
+            </div>
+            <div class="hero_rail-item">
+              <div class="hero_rail-bar"></div>
+              <div class="hero_rail-num u-text-style-small">04</div>
+              <div class="hero_rail-label u-text-style-small">Sonnenuntergang</div>
+            </div>
+            <div class="hero_rail-item">
+              <div class="hero_rail-bar"></div>
+              <div class="hero_rail-num u-text-style-small">05</div>
+              <div class="hero_rail-label u-text-style-small">Selfie Kills</div>
+            </div>
+          </div>
+        </div>
+        <div class="tab_right is-hero">
+          <div class="tab_content_wrap is-hero">
+            <div data-slot="" class="tab_content_list is-hero">
+              <div class="hero_pane">
+                <div class="hero_copy">
+                  <div class="hero_eyebrow">moyolamp x ray de la cruz</div>
+                  <h1 class="hero_head u-text-style-display">DER HAFEN<br>SCHLÄFT<br>NICHT.</h1>
+                  <div class="hero_media"><img src="{{ 'moyolamp-hamburger-hafen.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+                    <div class="hero_scrim"></div>
+                  </div>
+                  <p class="hero_sub">Für alle, die den Hafen im Herzen und im Ohr haben.</p>
+                  <a href="#" class="hero_cta">[ Zum Motiv ]</a>
+                </div>
+              </div>
+              <div class="hero_pane">
+                <div class="hero_copy">
+                  <div class="hero_eyebrow">moyolamp x ray de la cruz</div>
+                  <h1 class="hero_head u-text-style-display">HAMBURG,<br>I LOVE<br>YOU.</h1>
+                  <div class="hero_media"><img src="{{ 'moyolamp-i-love-you.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+                    <div class="hero_scrim"></div>
+                  </div>
+                  <p class="hero_sub">Die schönste Liebeserklärung, die je an einer Wand stand.</p>
+                  <a href="#" class="hero_cta">[ Zum Motiv ]</a>
+                </div>
+              </div>
+              <div class="hero_pane">
+                <div class="hero_copy">
+                  <div class="hero_eyebrow">moyolamp x ray de la cruz</div>
+                  <h1 class="hero_head u-text-style-display">HAMBURG,<br>I MISS<br>YOU.</h1>
+                  <div class="hero_media"><img src="{{ 'moyolamp-i-miss-you.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+                    <div class="hero_scrim"></div>
+                  </div>
+                  <p class="hero_sub">Für alle, die Hamburg im Herzen tragen, nicht nur im Pass.</p>
+                  <a href="#" class="hero_cta">[ Zum Motiv ]</a>
+                </div>
+              </div>
+              <div class="hero_pane">
+                <div class="hero_copy">
+                  <div class="hero_eyebrow">moyolamp x ray de la cruz</div>
+                  <h1 class="hero_head u-text-style-display">WENN DER<br>HIMMEL<br>KIPPT.</h1>
+                  <div class="hero_media"><img src="{{ 'moyolamp-goldene-stunde.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+                    <div class="hero_scrim"></div>
+                  </div>
+                  <p class="hero_sub">Die zwanzig Minuten, für die man stehen bleibt.</p>
+                  <a href="#" class="hero_cta">[ Zum Motiv ]</a>
+                </div>
+              </div>
+              <div class="hero_pane">
+                <div class="hero_copy">
+                  <div class="hero_eyebrow">moyolamp x ray de la cruz</div>
+                  <h1 class="hero_head u-text-style-display">SELFIE<br>KILLS.</h1>
+                  <div class="hero_media"><img src="{{ 'moyolamp-selfie-kills.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+                    <div class="hero_scrim"></div>
+                  </div>
+                  <p class="hero_sub">Dreh die Kamera um. Die Stadt ist auf der anderen Seite.</p>
+                  <a href="#" class="hero_cta">[ Zum Motiv ]</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-embed-js w-embed w-script">
+          <script>
+(function() {
+  const component = document.currentScript.parentElement.parentElement;
+  const uid = window.__tabUid = (window.__tabUid || 0) + 1;
+  document.addEventListener("DOMContentLoaded", function () {
+    let buttonList = component.querySelector(".tab_button_list"),
+      panelList = component.querySelector(".tab_content_list"),
+      previousButton = component.querySelector("[data-tab='previous']"),
+      nextButton = component.querySelector("[data-tab='next']"),
+      toggleButton = component.querySelector("[data-tab-button='toggle']"),
+      animating = false,
+      canPlay = true,
+      autoplayTl;
+    let autoplayDuration = true ? 7.5 : 0;
+    let transitionDuration = false ? 0.6 : 0.2;
+    function flattenDisplayContents(slot) {
+      if (!slot) return;
+      let child = slot.firstElementChild;
+      while (child && child.classList.contains("u-display-contents")) {
+        while (child.firstChild) {
+          slot.insertBefore(child.firstChild, child);
+        }
+        slot.removeChild(child);
+        child = slot.firstElementChild;
+      }
+    }
+    flattenDisplayContents(buttonList);
+    flattenDisplayContents(panelList);
+    function removeCMSList(slot) {
+      const dynList = Array.from(slot.children).find((child) => child.classList.contains("w-dyn-list"));
+      if (!dynList) return;
+      const nestedItems = dynList?.querySelector(".w-dyn-items")?.children;
+      if (!nestedItems) return;
+      const staticWrapper = [...slot.children];
+      [...nestedItems].forEach(el => { const c = [...el.children].find(c => !c.classList.contains('w-condition-invisible')); c && slot.appendChild(c); });
+      staticWrapper.forEach((el) => el.remove());
+    }
+    removeCMSList(buttonList);
+    removeCMSList(panelList);
+    let buttonItems = Array.from(buttonList.children);
+    let panelItems = Array.from(panelList.children);
+    if (!buttonList || !panelList || !buttonItems.length || !panelItems.length) {
+      console.warn("Missing elements in:", component);
+      return;
+    }
+    panelItems.forEach((panel, i) => {panel.style.display = "none"; panel.setAttribute("role", "tabpanel");});
+    buttonItems.forEach((button, i) => {button.setAttribute("role", "tab");});
+    panelList.removeAttribute("role");
+    buttonList.setAttribute("role", "tablist");
+    buttonItems.forEach((btn) => btn.setAttribute("role", "tab"));
+    panelItems.forEach((panel) => panel.setAttribute("role", "tabpanel"));
+    let activeIndex = 0;
+    const makeActive = (index, focus = false, animate = true, pause = true) => {
+      if (animating) return;
+      buttonItems.forEach((btn, i) => {
+        btn.classList.toggle("is-active", i === index);
+        btn.setAttribute("aria-selected", i === index ? "true" : "false");
+        btn.setAttribute("tabindex", i === index ? "0" : "-1");
+      });
+      panelItems.forEach((panel, i) => panel.classList.toggle("is-active", i === index));
+      if (nextButton) nextButton.disabled = index === buttonItems.length - 1 && !false;
+      if (previousButton) previousButton.disabled = index === 0 && !false;
+      if (focus) buttonItems[index].focus();
+      const previousPanel = panelItems[activeIndex];
+      const currentPanel = panelItems[index];
+      let direction = 1;
+      if (activeIndex > index) direction = -1;
+      if (typeof gsap !== "undefined" && animate && activeIndex !== index) {
+        if (autoplayTl && !canPlay && typeof autoplayTl.restart === "function") {
+          autoplayTl.restart();
+        }
+        animating = true;
+        let tl = gsap.timeline({ onComplete: () => {animating = false; if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();}, defaults: { duration: transitionDuration, ease: "power1.out" } });
+        if (false) {
+          tl.set(currentPanel, { display: "block", position: "relative" });
+          if (previousPanel) tl.set(previousPanel, { position: "absolute", top: 0, left: 0, width: "100%" });
+          if (previousPanel) tl.fromTo(previousPanel, { xPercent: 0 }, { xPercent: -120 * direction });
+          tl.fromTo(currentPanel, { xPercent: 120 * direction }, { xPercent: 0 }, "<");
+          if (previousPanel) tl.set(previousPanel, { display: "none" });
+        } else {
+          if (previousPanel) tl.to(previousPanel, { opacity: 0 });
+          if (previousPanel) tl.set(previousPanel, { display: "none" });
+          tl.set(currentPanel, { display: "block" });
+          tl.fromTo(currentPanel, { opacity: 0 }, { opacity: 1 });
+        }
+      } else {
+        if (previousPanel) previousPanel.style.display = "none";
+        if (currentPanel) currentPanel.style.display = "block";
+      }
+      buttonList.scrollTo({ left: buttonItems[index].offsetLeft, behavior: 'smooth' });
+      activeIndex = index;
+    };
+    makeActive(0, false, false);
+    const updateIndex = (delta, focus = false, pause = true) => makeActive((activeIndex + delta + buttonItems.length) % buttonItems.length, focus, true, pause);
+    nextButton?.addEventListener("click", () => updateIndex(1));
+    previousButton?.addEventListener("click", () => updateIndex(-1));
+    buttonItems.forEach((btn, index) => {
+      let tabId = component.getAttribute("data-tab-component-id");
+      tabId = tabId ? tabId.toLowerCase().replaceAll(" ", "-") : uid;
+      let itemId = btn.getAttribute("data-tab-item-id");
+      itemId = itemId ? itemId.toLowerCase().replaceAll(" ", "-") : index + 1;
+      btn.setAttribute("id", "tab-button-" + tabId + "-" + itemId);
+      btn.setAttribute("aria-controls", "tab-panel-" + tabId + "-" + itemId);
+      panelItems[index]?.setAttribute("id", "tab-panel-" + tabId + "-" + itemId);
+      panelItems[index]?.setAttribute("aria-labelledby", btn.id);
+      if (new URLSearchParams(location.search).get("tab-id") === tabId + "-" + itemId) makeActive(index), autoplayDuration = 0, component.scrollIntoView({behavior: "smooth", block: "start"}), history.replaceState({}, "", ((u) => (u.searchParams.delete("tab-id"), u))(new URL(location.href)));
+      btn.addEventListener("click", () => makeActive(index));
+      btn.addEventListener("keydown", (e) => {
+        if (["ArrowRight", "ArrowDown"].includes(e.key)) updateIndex(1, true);
+        else if (["ArrowLeft", "ArrowUp"].includes(e.key)) updateIndex(-1, true);
+      });
+    });
+    if (true && typeof gsap !== "undefined") {
+      autoplayTl = gsap.timeline({ repeat: -1 }).fromTo(component, {"--progress": 0}, { onComplete: () => updateIndex(1, false, false), "--progress": 1, ease: "none", duration: autoplayDuration });
+      let isHovered = false, hasFocusInside = false, prefersReducedMotion = false, inView = true;
+      function updateAuto() { if (prefersReducedMotion || !inView || canPlay || isHovered || hasFocusInside) autoplayTl.pause(); else autoplayTl.play(); }
+      function setButton() {
+        canPlay = !canPlay;
+        toggleButton?.setAttribute("aria-pressed", !canPlay ? "true" : "false");
+        if (!canPlay) isHovered = hasFocusInside = prefersReducedMotion = false;
+        updateAuto();
+      }
+      setButton();
+      toggleButton?.addEventListener("click", function () {
+        setButton();
+      });
+      function handleMotionChange(e) { prefersReducedMotion = e.matches; updateAuto(); canPlay = !e.matches; setButton(); }
+      handleMotionChange(window.matchMedia("(prefers-reduced-motion: reduce)"));
+      window.matchMedia("(prefers-reduced-motion: reduce)").addEventListener("change", handleMotionChange);
+      if (false) component.addEventListener("mouseenter", () => { isHovered = true; updateAuto() });
+      if (false) component.addEventListener("mouseleave", () => { hasFocusInside = false; isHovered = false; updateAuto() });
+      component.addEventListener("focusin", () => { hasFocusInside = true; updateAuto() });
+      component.addEventListener("focusout", e => { if (!e.relatedTarget || !component.contains(e.relatedTarget)) { hasFocusInside = false; updateAuto() } });
+      new IntersectionObserver(e => { inView = e[0].isIntersecting; updateAuto(); }, { threshold: 0 }).observe(component);
+    }
+  });
+})();
+</script>
+        </div> {% schema %} {
+    "tag": "div",
+    "name": "Home Hero",
+    "class": "tab_wrap is-hero",
+    "presets": [
+        {
+            "name": "Home Hero",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
