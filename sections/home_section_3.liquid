@@ -16,28 +16,26 @@
                         <path d="M80.9867 0.179528C109.205 -1.20021 122.239 5.14409 138.912 27.1822C125.838 18.8536 111.724 13.2227 96.2932 11.6594C74.8284 9.76963 56.6424 15.2239 38.0515 25.7791C48.3761 9.04791 61.9247 2.59927 80.9867 0.179528Z" fill="currentColor"></path>
                       </svg></div>
                     <div class="u-eyebrow-text u-text-style-main w-richtext">
-                      <p>moyolamp x Ray de la Cruz</p>
-                    </div>
+{{ section.settings.text_eyebrow_2 }}
+</div>
                   </div>
                 </div>
-                <div data-number="20" data-wf--typography-heading--variant="h2" class="u-heading w-variant-433d40c6-c261-f13f-c899-61d2cadf150f w-richtext u-margin-bottom-4">
-                  <h2>Mehr als eine Lampe.</h2>
-                  <p>‍</p>
-                  <h2>moyolamp steht für Erinnerung.</h2>
-                </div>
+                <div data-number="20" data-wf--typography-heading--variant="h2" class="u-heading w-variant-433d40c6-c261-f13f-c899-61d2cadf150f w-richtext u-margin-bottom-4">{{ section.settings.html_marke_headline }} </div>
                 <p class="u-accent-light u-weight-bold">ART LIGHTS A BRIGHTER TOMORROW</p>
               </div>
               <div class="u-layout-column-2 w-variant-558793eb-2b07-490b-9842-2d7e6f6bf325 u-align-self-end">
                 <div class="div-block-3">
                   <div class="cta_copy-wrapper">
-                    <div data-number="-1" data-wf--typography-heading--variant="h6" class="u-heading w-variant-823daff2-fd84-8da0-4ed1-92a39b869ad0 w-richtext u-color-faded u-margin-bottom-1">
-                      <h2>Die Wände gibt's live in Hamburg</h2>
-                    </div>
+                    <div data-number="-1" data-wf--typography-heading--variant="h6" class="u-heading w-variant-823daff2-fd84-8da0-4ed1-92a39b869ad0 w-richtext u-color-faded u-margin-bottom-1">{{ section.settings.html_waende_headline }} </div>
                     <div data-wf--button-main--variant="link" data-trigger="hover focus" class="button_main_wrap w-variant-625d5df4-ad91-f7dc-9e2f-2e69f3fd7400">
-                      <div data-wf--clickable--variant="focus-ring-outside" class="clickable_wrap u-cover-absolute"><button type="button" aria-label="Erfahre mehr über Ray" class="clickable_btn"></button></div>
+                      <div data-wf--clickable--variant="focus-ring-outside" class="clickable_wrap u-cover-absolute">
+                        <a aria-label="Erfahre mehr über Ray" href="/pages/der-kunstler" class="clickable_link w-inline-block"></a>
+                      </div>
                       <div data-button="" class="button_main_element w-variant-625d5df4-ad91-f7dc-9e2f-2e69f3fd7400">
                         <div aria-hidden="true" class="button_main_text u-text-style-main u-weight-bold">[</div>
-                        <div aria-hidden="true" class="button_main_text u-text-style-main u-weight-bold">Erfahre mehr über Ray</div>
+                        <div aria-hidden="true" class="button_main_text u-text-style-main u-weight-bold">
+{{ section.settings.text_button_ray }}
+</div>
                         <div aria-hidden="true" class="button_main_text u-text-style-main u-weight-bold">]</div>
                       </div>
                     </div>
@@ -50,6 +48,32 @@
     "tag": "section",
     "name": "Home Section 3",
     "class": "u-section u-padding-top-large u-padding-bottom-small u-theme-dark",
+    "settings": [
+        {
+            "id": "text_eyebrow_2",
+            "type": "text",
+            "label": "Eyebrow 2",
+            "default": "\n                      <p>moyolamp x Ray de la Cruz<\/p>\n                    "
+        },
+        {
+            "id": "html_marke_headline",
+            "type": "html",
+            "label": "Marke Headline",
+            "default": "\n                  <h2>Mehr als eine Lampe.<\/h2>\n                  <p>\u200d<\/p>\n                  <h2>moyolamp steht f\u00fcr Erinnerung.<\/h2>\n                "
+        },
+        {
+            "id": "html_waende_headline",
+            "type": "html",
+            "label": "Waende Headline",
+            "default": "\n                      <h2>Die W\u00e4nde gibt's live in Hamburg<\/h2>\n                    "
+        },
+        {
+            "id": "text_button_ray",
+            "type": "text",
+            "label": "Button Ray",
+            "default": "Erfahre mehr \u00fcber Ray"
+        }
+    ],
     "presets": [
         {
             "name": "Home Section 3",

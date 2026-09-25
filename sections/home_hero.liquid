@@ -34,91 +34,175 @@
         </div>
         <div class="tab_left is-hero">
           <div data-slot="" role="tablist" class="tab_button_list is-hero">
-            <div class="hero_rail-item">
-              <div class="hero_rail-bar"></div>
-              <div class="hero_rail-num u-text-style-small">01</div>
-              <div class="hero_rail-label u-text-style-small">Hamburger Hafen</div>
-            </div>
-            <div class="hero_rail-item">
-              <div class="hero_rail-bar"></div>
-              <div class="hero_rail-num u-text-style-small">02</div>
-              <div class="hero_rail-label u-text-style-small">Hamburg, I Love You</div>
-            </div>
-            <div class="hero_rail-item">
-              <div class="hero_rail-bar"></div>
-              <div class="hero_rail-num u-text-style-small">03</div>
-              <div class="hero_rail-label u-text-style-small">Hamburg, I Miss You</div>
-            </div>
-            <div class="hero_rail-item">
-              <div class="hero_rail-bar"></div>
-              <div class="hero_rail-num u-text-style-small">04</div>
-              <div class="hero_rail-label u-text-style-small">Sonnenuntergang</div>
-            </div>
-            <div class="hero_rail-item">
-              <div class="hero_rail-bar"></div>
-              <div class="hero_rail-num u-text-style-small">05</div>
-              <div class="hero_rail-label u-text-style-small">Selfie Kills</div>
-            </div>
+            {% for block in section.blocks %}    <div li-for="block in section.blocks" class="hero_rail-item">
+                                    
+              
+                            <div class="hero_rail-bar"></div>
+                            
+              
+                            <div li-object="forloop.index | prepend: '0'" class="hero_rail-num u-text-style-small">{{ forloop.index | prepend: '0' }}</div>
+                            
+              
+                            <div li-object="block.settings.motiv" class="hero_rail-label u-text-style-small">{{ block.settings.motiv }}</div>
+                            
+            
+                        </div>
+{% endfor %}
           </div>
         </div>
         <div class="tab_right is-hero">
           <div class="tab_content_wrap is-hero">
             <div data-slot="" class="tab_content_list is-hero">
-              <div class="hero_pane">
-                <div class="hero_copy">
-                  <div class="hero_eyebrow">moyolamp x ray de la cruz</div>
-                  <h1 class="hero_head u-text-style-display">DER HAFEN<br>SCHLÄFT<br>NICHT.</h1>
-                  <div class="hero_media"><img src="{{ 'moyolamp-hamburger-hafen.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+              {% for block in section.blocks %}
+    {% if block.type == "slide" %}
+                    <div li-block="Slide" class="hero_pane">
+                                    
+                
+                                    <div class="hero_copy">
+                  <div class="hero_eyebrow">
+{{ block.settings.text_eyebrow }}
+</div>
+                  <h1 class="hero_head u-text-style-display"> {{ block.settings.textarea_headline }} </h1>
+                  <div class="hero_media">{% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 1000 | image_tag: loading: 'eager', alt: 'moyolamp Hamburger Hafen', class: 'hero_img' }}
+{% else %}
+<img src="{{ 'moyolamp-hamburger-hafen.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+{% endif %}
                     <div class="hero_scrim"></div>
                   </div>
-                  <p class="hero_sub">Für alle, die den Hafen im Herzen und im Ohr haben.</p>
-                  <a href="#" class="hero_cta">[ Zum Motiv ]</a>
+                  <p class="hero_sub">
+{{ block.settings.text_subline }}
+</p>
+                  <a href="{{ block.settings.url_link }}" class="hero_cta"> {{ block.settings.text_button }} </a>
+                  <div class="u-display-none">
+{{ block.settings.text_motiv }}
+</div>
                 </div>
-              </div>
-              <div class="hero_pane">
-                <div class="hero_copy">
-                  <div class="hero_eyebrow">moyolamp x ray de la cruz</div>
-                  <h1 class="hero_head u-text-style-display">HAMBURG,<br>I LOVE<br>YOU.</h1>
-                  <div class="hero_media"><img src="{{ 'moyolamp-i-love-you.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+                                    
+              
+                            </div>
+            {% endif %}
+{% endfor %}
+              {% for block in section.blocks %}
+    {% if block.type == "slide" %}
+                    <div li-block="Slide" class="hero_pane">
+                                    
+                
+                                    <div class="hero_copy">
+                  <div class="hero_eyebrow">
+{{ block.settings.text_eyebrow }}
+</div>
+                  <h1 class="hero_head u-text-style-display"> {{ block.settings.textarea_headline }} </h1>
+                  <div class="hero_media">{% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 1000 | image_tag: loading: 'eager', alt: 'moyolamp Hamburger Hafen', class: 'hero_img' }}
+{% else %}
+<img src="{{ 'moyolamp-i-love-you.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+{% endif %}
                     <div class="hero_scrim"></div>
                   </div>
-                  <p class="hero_sub">Die schönste Liebeserklärung, die je an einer Wand stand.</p>
-                  <a href="#" class="hero_cta">[ Zum Motiv ]</a>
+                  <p class="hero_sub">
+{{ block.settings.text_subline }}
+</p>
+                  <a href="{{ block.settings.url_link }}" class="hero_cta"> {{ block.settings.text_button }} </a>
+                  <div class="u-display-none">
+{{ block.settings.text_motiv }}
+</div>
                 </div>
-              </div>
-              <div class="hero_pane">
-                <div class="hero_copy">
-                  <div class="hero_eyebrow">moyolamp x ray de la cruz</div>
-                  <h1 class="hero_head u-text-style-display">HAMBURG,<br>I MISS<br>YOU.</h1>
-                  <div class="hero_media"><img src="{{ 'moyolamp-i-miss-you.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+                                    
+              
+                            </div>
+            {% endif %}
+{% endfor %}
+              {% for block in section.blocks %}
+    {% if block.type == "slide" %}
+                    <div li-block="Slide" class="hero_pane">
+                                    
+                
+                                    <div class="hero_copy">
+                  <div class="hero_eyebrow">
+{{ block.settings.text_eyebrow }}
+</div>
+                  <h1 class="hero_head u-text-style-display"> {{ block.settings.textarea_headline }} </h1>
+                  <div class="hero_media">{% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 1000 | image_tag: loading: 'eager', alt: 'moyolamp Hamburger Hafen', class: 'hero_img' }}
+{% else %}
+<img src="{{ 'moyolamp-i-miss-you.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+{% endif %}
                     <div class="hero_scrim"></div>
                   </div>
-                  <p class="hero_sub">Für alle, die Hamburg im Herzen tragen, nicht nur im Pass.</p>
-                  <a href="#" class="hero_cta">[ Zum Motiv ]</a>
+                  <p class="hero_sub">
+{{ block.settings.text_subline }}
+</p>
+                  <a href="{{ block.settings.url_link }}" class="hero_cta"> {{ block.settings.text_button }} </a>
+                  <div class="u-display-none">
+{{ block.settings.text_motiv }}
+</div>
                 </div>
-              </div>
-              <div class="hero_pane">
-                <div class="hero_copy">
-                  <div class="hero_eyebrow">moyolamp x ray de la cruz</div>
-                  <h1 class="hero_head u-text-style-display">WENN DER<br>HIMMEL<br>KIPPT.</h1>
-                  <div class="hero_media"><img src="{{ 'moyolamp-goldene-stunde.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+                                    
+              
+                            </div>
+            {% endif %}
+{% endfor %}
+              {% for block in section.blocks %}
+    {% if block.type == "slide" %}
+                    <div li-block="Slide" class="hero_pane">
+                                    
+                
+                                    <div class="hero_copy">
+                  <div class="hero_eyebrow">
+{{ block.settings.text_eyebrow }}
+</div>
+                  <h1 class="hero_head u-text-style-display"> {{ block.settings.textarea_headline }} </h1>
+                  <div class="hero_media">{% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 1000 | image_tag: loading: 'eager', alt: 'moyolamp Hamburger Hafen', class: 'hero_img' }}
+{% else %}
+<img src="{{ 'moyolamp-goldene-stunde.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+{% endif %}
                     <div class="hero_scrim"></div>
                   </div>
-                  <p class="hero_sub">Die zwanzig Minuten, für die man stehen bleibt.</p>
-                  <a href="#" class="hero_cta">[ Zum Motiv ]</a>
+                  <p class="hero_sub">
+{{ block.settings.text_subline }}
+</p>
+                  <a href="{{ block.settings.url_link }}" class="hero_cta"> {{ block.settings.text_button }} </a>
+                  <div class="u-display-none">
+{{ block.settings.text_motiv }}
+</div>
                 </div>
-              </div>
-              <div class="hero_pane">
-                <div class="hero_copy">
-                  <div class="hero_eyebrow">moyolamp x ray de la cruz</div>
-                  <h1 class="hero_head u-text-style-display">SELFIE<br>KILLS.</h1>
-                  <div class="hero_media"><img src="{{ 'moyolamp-selfie-kills.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+                                    
+              
+                            </div>
+            {% endif %}
+{% endfor %}
+              {% for block in section.blocks %}
+    {% if block.type == "slide" %}
+                    <div li-block="Slide" class="hero_pane">
+                                    
+                
+                                    <div class="hero_copy">
+                  <div class="hero_eyebrow">
+{{ block.settings.text_eyebrow }}
+</div>
+                  <h1 class="hero_head u-text-style-display"> {{ block.settings.textarea_headline }} </h1>
+                  <div class="hero_media">{% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 1000 | image_tag: loading: 'eager', alt: 'moyolamp Hamburger Hafen', class: 'hero_img' }}
+{% else %}
+<img src="{{ 'moyolamp-selfie-kills.webp' | asset_url }}" loading="eager" alt="moyolamp Hamburger Hafen" class="hero_img">
+{% endif %}
                     <div class="hero_scrim"></div>
                   </div>
-                  <p class="hero_sub">Dreh die Kamera um. Die Stadt ist auf der anderen Seite.</p>
-                  <a href="#" class="hero_cta">[ Zum Motiv ]</a>
+                  <p class="hero_sub">
+{{ block.settings.text_subline }}
+</p>
+                  <a href="{{ block.settings.url_link }}" class="hero_cta"> {{ block.settings.text_button }} </a>
+                  <div class="u-display-none">
+{{ block.settings.text_motiv }}
+</div>
                 </div>
-              </div>
+                                    
+              
+                            </div>
+            {% endif %}
+{% endfor %}
             </div>
           </div>
         </div>
@@ -265,11 +349,75 @@
     "tag": "div",
     "name": "Home Hero",
     "class": "tab_wrap is-hero",
+    "blocks": [
+        {
+            "name": "Slide",
+            "type": "slide",
+            "settings": [
+                {
+                    "id": "text_eyebrow",
+                    "type": "text",
+                    "label": "Eyebrow",
+                    "default": "moyolamp x ray de la cruz"
+                },
+                {
+                    "id": "textarea_headline",
+                    "type": "textarea",
+                    "label": "Headline",
+                    "default": "DER HAFEN<br\/>SCHL\u00c4FT<br\/>NICHT."
+                },
+                {
+                    "id": "image_bild",
+                    "type": "image_picker",
+                    "label": "Bild"
+                },
+                {
+                    "id": "text_subline",
+                    "type": "text",
+                    "label": "Subline",
+                    "default": "F\u00fcr alle, die den Hafen im Herzen und im Ohr haben."
+                },
+                {
+                    "id": "text_button",
+                    "type": "text",
+                    "label": "Button",
+                    "default": "[ Zum Motiv ]"
+                },
+                {
+                    "id": "url_link",
+                    "type": "url",
+                    "label": "Link"
+                },
+                {
+                    "id": "text_motiv",
+                    "type": "text",
+                    "label": "Motiv",
+                    "default": "Hamburger Hafen"
+                }
+            ]
+        }
+    ],
     "presets": [
         {
             "name": "Home Hero",
             "category": "Liquify",
-            "blocks": []
+            "blocks": [
+                {
+                    "type": "slide"
+                },
+                {
+                    "type": "slide"
+                },
+                {
+                    "type": "slide"
+                },
+                {
+                    "type": "slide"
+                },
+                {
+                    "type": "slide"
+                }
+            ]
         }
     ]
 } {% endschema %}

@@ -18,21 +18,31 @@
                 </svg>
               </div>
             </div>
-            <div class="loader_eyebrow">Hamburg Edition · Ray de la Cruz</div>
+            <div class="loader_eyebrow">
+{{ section.settings.text_eyebrow }}
+</div>
           </div>
           <div>
             <div class="loader_manifest">
-              <p class="loader_p">Eine Lampe macht ein Zimmer hell. Das kann jede.</p>
-              <p class="loader_p u-hide-mobile">moyolamp ist eine Leinwand. Ray de la Cruz hat fünf davon designed, so wie er seit Jahren Hamburger Wände bemalt: einen Hafen im Gegenlicht, ein Herz auf einer Mauer, eine weinende Frau, einen Sonnenuntergang über der ganzen Stadt und eine Ansage, die nicht jedem gefallen muss.</p>
-              <p class="loader_p u-hide-mobile">Tagsüber steht sie einfach da. Gefaltetes Papier, acht Flächen, still — fast unscheinbar.</p>
-              <p class="loader_p">Abends machst du sie an, und die Emotion kommt von innen. Der Hafen leuchtet. Das Herz leuchtet. Die ganze Stadt leuchtet, auf einem Tisch, in deinem Zimmer, immer dann, wenn du dich erinnern willst. Kein Poster, kein Bildschirm, nur echtes Licht.</p>
-              <p class="loader_claim">moyolamp ist mehr als eine Lampe. Sie ist eine Leinwand, die Erinnerungen hervorrufen kann.</p>
+              <p class="loader_p"> {{ section.settings.textarea_absatz_1 }} </p>
+              <p class="loader_p u-hide-mobile"> {{ section.settings.textarea_absatz_2 }} </p>
+              <p class="loader_p u-hide-mobile"> {{ section.settings.textarea_absatz_3 }} </p>
+              <p class="loader_p"> {{ section.settings.textarea_absatz_4 }} </p>
+              <p class="loader_claim">
+{{ section.settings.text_claim }}
+</p>
             </div>
             <div class="loader_enterrow">
-              <a id="loader-sound" href="#" class="loader_enter">[ LICHT & MUSIK AN ]</a>
-              <a id="loader-quiet" href="#" class="loader_enter">[ NUR LICHT, Ohne Ton ]</a>
+              <a id="loader-sound" href="#" class="loader_enter" href="#">
+{{ section.settings.text_knopf_mit_ton }}
+</a>
+              <a id="loader-quiet" href="#" class="loader_enter" href="#">
+{{ section.settings.text_knopf_ohne_ton }}
+</a>
             </div>
-            <div class="loader_hint">Licht & Musik startet den Song · oder einfach weiterscrollen</div>
+            <div class="loader_hint">
+{{ section.settings.text_hinweis }}
+</div>
           </div>
         </div>
         <div class="w-embed w-script">
@@ -151,6 +161,62 @@ document.addEventListener('DOMContentLoaded', function () {
     "tag": "div",
     "name": "Home Intro",
     "class": "loader_wrap",
+    "settings": [
+        {
+            "id": "text_eyebrow",
+            "type": "text",
+            "label": "Eyebrow",
+            "default": "Hamburg Edition \u00b7 Ray de la Cruz"
+        },
+        {
+            "id": "textarea_absatz_1",
+            "type": "textarea",
+            "label": "Absatz 1",
+            "default": "Eine Lampe macht ein Zimmer hell. Das kann jede."
+        },
+        {
+            "id": "textarea_absatz_2",
+            "type": "textarea",
+            "label": "Absatz 2",
+            "default": "moyolamp ist eine Leinwand. Ray de la Cruz hat f\u00fcnf davon designed, so wie er seit Jahren Hamburger W\u00e4nde bemalt: einen Hafen im Gegenlicht, ein Herz auf einer Mauer, eine weinende Frau, einen Sonnenuntergang \u00fcber der ganzen Stadt und eine Ansage, die nicht jedem gefallen muss."
+        },
+        {
+            "id": "textarea_absatz_3",
+            "type": "textarea",
+            "label": "Absatz 3",
+            "default": "Tags\u00fcber steht sie einfach da. Gefaltetes Papier, acht Fl\u00e4chen, still \u2014 fast unscheinbar."
+        },
+        {
+            "id": "textarea_absatz_4",
+            "type": "textarea",
+            "label": "Absatz 4",
+            "default": "Abends machst du sie an, und die Emotion kommt von innen. Der Hafen leuchtet. Das Herz leuchtet. Die ganze Stadt leuchtet, auf einem Tisch, in deinem Zimmer, immer dann, wenn du dich erinnern willst. Kein Poster, kein Bildschirm, nur echtes Licht."
+        },
+        {
+            "id": "text_claim",
+            "type": "text",
+            "label": "Claim",
+            "default": "moyolamp ist mehr als eine Lampe. Sie ist eine Leinwand, die Erinnerungen hervorrufen kann."
+        },
+        {
+            "id": "text_knopf_mit_ton",
+            "type": "text",
+            "label": "Knopf mit Ton",
+            "default": "[ LICHT\u00a0&amp;\u00a0MUSIK\u00a0AN ]"
+        },
+        {
+            "id": "text_knopf_ohne_ton",
+            "type": "text",
+            "label": "Knopf ohne Ton",
+            "default": "[ NUR\u00a0LICHT, Ohne Ton ]"
+        },
+        {
+            "id": "text_hinweis",
+            "type": "text",
+            "label": "Hinweis",
+            "default": "Licht &amp; Musik startet den Song \u00b7 oder einfach weiterscrollen"
+        }
+    ],
     "presets": [
         {
             "name": "Home Intro",

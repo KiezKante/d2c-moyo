@@ -23,6 +23,8 @@
   <link href="{{ 'webclip-192.png' | asset_url }}" rel="icon" type="image/png" sizes="192x192">
   <link href="{{ 'webclip.png' | asset_url }}" rel="icon" type="image/png" sizes="512x512"><!--  GSAP: Lumos-Tab (Hero) braucht es vor DOMContentLoaded  -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <!--  Alpine.js: Pflicht fuer Liquiflow Elements (Mini Cart, Add to Cart, Menge)  -->
+  <script defer="" src="{{ 'alpinejs3.js' | asset_url }}"></script>
   <!--  Liquiflow: li-cloak blendet Design-Platzhalter aus, wird beim Konvertieren entfernt  -->
   <style>[li-cloak_disabled] { display: none !important; }</style>
 <script src="{{ 'li_helper.js' | asset_url }}" type="text/javascript"></script>{{ content_for_header }}</head>
@@ -412,8 +414,8 @@ html.wf-design-mode .guide_wrap {
       </a>
       <div class="nav_right">
         <div class="nav_links">
-          <a href="#edition" class="nav_link">Editionen</a>
-          <a href="#ray" class="nav_link">Der Künstler</a>
+          <a href="/collections/all" class="nav_link">Editionen</a>
+          <a href="/pages/der-kunstler" class="nav_link">Der Künstler</a>
           <a href="#objekt" class="nav_link">Mehr zur moyolamp</a>
         </div>
         <a id="sound-toggle" href="#" class="nav_sound">
@@ -607,11 +609,7 @@ html.wf-design-mode .guide_wrap {
         <div class="footer_bottom_contain u-container">
           <div class="footer_bottom_layout">
             <div class="footer_bottom_text u-text-style-small"><span>© </span><span data-dynamic-year=" ">{{year}}</span><span> Copyright. All Rights Reserved.</span></div>
-            <div data-trigger="group" role="list" class="footer_bottom_list">
-              <div data-number="60" data-wf--typography-paragraph--variant="inherit" class="u-text u-rich-text w-richtext u-text-style-small u-color-faded u-margin-bottom-0">
-                <p>Hamburg Edition · moyolamp x Ray de la Cruz</p>
-              </div>
-            </div>
+            <div data-trigger="group" role="list" class="footer_bottom_list"></div>
           </div>
         </div>
       </div>
@@ -630,9 +628,8 @@ document.addEventListener("DOMContentLoaded", function () {
           <div>[ Schließen ]</div>
         </button>
         <div class="menu_list">
-          <a href="#edition" class="menu_link">Edition</a>
-          <a href="#ray" class="menu_link">Ray</a>
-          <a href="#objekt" class="menu_link">Objekt</a>
+          <a href="/collections/all" class="menu_link">Edition</a>
+          <a href="/pages/der-kunstler" class="menu_link">Ray</a>
         </div>
       </div>
     </div>
