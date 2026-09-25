@@ -5,6 +5,9 @@
                 <div class="product_image-wrapper">
                   <div data-wf--visual-image--variant="cover" class="u-image-wrapper w-variant-4972adff-107c-1f37-d19c-526a2bf55c28"><img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" draggable="false" alt="" class="u-image"></div>
                 </div>
+                <div>
+                  <div class="product_image_wrap"><img src="{{ product.featured_image | image_url: width: 1400 }}" alt="{{ product.title }}" li-object:src="product.featured_image | image_url: width: 1400" li-object:alt="product.title" class="product_image_img"></div>
+                </div>
               </div>
               <div class="u-layout-column-2 w-variant-558793eb-2b07-490b-9842-2d7e6f6bf325  ">
                 <div style="" class="product_chips">
@@ -17,7 +20,7 @@
                     </div>
                   </div>
                 </div>
-                <div data-number="20" data-wf--typography-heading--variant="h3" class="u-heading w-variant-701c4b6c-37cf-de59-d80d-80a1822c4994 w-richtext product_title u-margin-bottom-3">Motivname</div>
+                <div data-number="20" data-wf--typography-heading--variant="h3" class="u-heading w-variant-701c4b6c-37cf-de59-d80d-80a1822c4994 w-richtext product_title u-margin-bottom-3"></div>
                 <div class="u-eyebrow-wrapper u-margin-bottom-4">
                   <div class="u-eyebrow-layout">
                     <div class="eyebrow_icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 176 176" fill="none" class="u-svg">
@@ -27,21 +30,22 @@
                         <path d="M83.247 26.6029C116.715 24.1001 145.851 49.4245 148.295 83.1427C150.74 116.862 125.566 146.182 92.0916 148.604C58.6745 151.021 29.6293 125.714 27.1887 92.0534C24.7486 58.3919 49.8354 29.1017 83.247 26.6029ZM92.6301 122.738C111.966 119.935 125.381 101.867 122.587 82.3905C119.793 62.9137 101.85 49.4105 82.5179 52.2366C63.2016 55.0604 49.8113 73.1179 52.603 92.578C55.3944 112.038 73.3115 125.538 92.6301 122.738Z" fill="currentColor"></path>
                         <path d="M80.9867 0.179528C109.205 -1.20021 122.239 5.14409 138.912 27.1822C125.838 18.8536 111.724 13.2227 96.2932 11.6594C74.8284 9.76963 56.6424 15.2239 38.0515 25.7791C48.3761 9.04791 61.9247 2.59927 80.9867 0.179528Z" fill="currentColor"></path>
                       </svg></div>
-                    <div class="u-eyebrow-text u-text-style-main w-richtext">Motiv 01 von 05 · Ray de la Cruz</div>
+                    <div class="u-eyebrow-text u-text-style-main w-richtext">
+{{ section.settings.text_motiv_zeile }}
+</div>
                   </div>
                 </div>
-                <div data-number="52" data-wf--typography-paragraph--variant="inherit" class="u-text u-rich-text w-richtext product_intro">Kurztext zum Motiv, zwei bis drei Sätze. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div data-number="52" data-wf--typography-paragraph--variant="inherit" class="u-text u-rich-text w-richtext product_intro"> {{ section.settings.richtext_ }} </div>
                 <div style="" class="product_spec_list">
                   <div class="u-display-contents">
                     <div class="product_spec_wrap">
                       <div class="product_spec_label">Motiv</div>
                       <div class="product_spec_slot">
                         <div class="u-display-contents">
-                          <a href="#" data-trigger="hover focus" data-wf--product-swatch--variant="klein-aktiv" class="product_swatch_wrap w-variant-225354ca-5b82-53be-71d7-20e365cbff67"><img src="{{ 'hamburger-hafen.webp' | asset_url }}" loading="lazy" alt="" class="product_swatch_img"></a>
-                          <a href="#" data-trigger="hover focus" data-wf--product-swatch--variant="klein" class="product_swatch_wrap"><img src="{{ 'hamburger-hafen.webp' | asset_url }}" loading="lazy" alt="" class="product_swatch_img"></a>
-                          <a href="#" data-trigger="hover focus" data-wf--product-swatch--variant="klein" class="product_swatch_wrap"><img src="{{ 'hamburger-hafen.webp' | asset_url }}" loading="lazy" alt="" class="product_swatch_img"></a>
-                          <a href="#" data-trigger="hover focus" data-wf--product-swatch--variant="klein" class="product_swatch_wrap"><img src="{{ 'hamburger-hafen.webp' | asset_url }}" loading="lazy" alt="" class="product_swatch_img"></a>
-                          <a href="#" data-trigger="hover focus" data-wf--product-swatch--variant="klein" class="product_swatch_wrap"><img src="{{ 'hamburger-hafen.webp' | asset_url }}" loading="lazy" alt="" class="product_swatch_img"></a>
+                          {% for p in collections.all.products %}    <a data-trigger="hover focus" href="#" li-for="p in collections.all.products" li-object:href="p.url" data-wf--product-swatch--variant="klein" class="product_swatch_wrap">
+                                    <img src="{{ p.featured_image | image_url: width: 400 }}" alt="{{ p.title }}" loading="lazy" li-object:src="p.featured_image | image_url: width: 400" li-object:alt="p.title" class="product_swatch_img">
+                        </a>
+{% endfor %}
                         </div>
                       </div>
                     </div>
@@ -75,31 +79,53 @@
                     </div>
                     <div class="product_spec_wrap">
                       <div class="product_spec_label">Preis</div>
-                      <div class="product_spec_value">29,90 €</div>
+                      <div class="product_spec_value">{{ product.price | money }}</div>
                       <div class="product_spec_slot">
                         <div class="u-display-contents"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div style="" class="product_cta">
+                <script src="{{ 'li_custom.js' | asset_url }}" type="text/javascript"></script>
+<div style="" li-element="product-variant-container" class="product_cta" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" x-init="$nextTick(() => { activateVariants() })" @setbundleitem.window="updateBundleItem($event.detail.product, $event.detail.quantity)">
                   <div class="u-display-contents">
-                    <div data-product-qty="" class="product_qty_wrap">
-                      <a type="button" aria-label="Eine weniger" href="#" class="product_qty_button w-button">−</a>
-                      <div class="product_qty_value">1</div>
-                      <a type="button" aria-label="Eine mehr" href="#" class="product_qty_button w-button">+</a>
-                    </div>
-                    <div data-wf--button-main--variant="primary" data-trigger="hover focus" class="button_main_wrap">
-                      <div data-wf--clickable--variant="focus-ring-outside" class="clickable_wrap u-cover-absolute"><button type="button" aria-label="In den Warenkorb" class="clickable_btn"></button></div>
-                      <div data-button="" class="button_main_element">
-                        <div aria-hidden="true" class="button_main_text u-text-style-main u-weight-bold">[</div>
-                        <div aria-hidden="true" class="button_main_text u-text-style-main u-weight-bold">In den Warenkorb</div>
-                        <div aria-hidden="true" class="button_main_text u-text-style-main u-weight-bold">]</div>
+                    <div data-product-qty="" class="product_buy">
+                      <div class="product_qty_wrap">
+                        <a type="button" aria-label="Eine weniger" href="#" class="product_qty_button w-button">−</a><input type="number" min="1" inputmode="numeric" aria-label="Menge" li-element="add-to-cart-quantity" class="product_qty_value is-input" value="1" x-model="quantity">
+                        <a type="button" aria-label="Eine mehr" href="#" class="product_qty_button w-button">+</a>
+                      </div><button type="button" li-element="add-to-cart" li-if="product.available" class="button_main_element is-buy" @click="addToCart($event, true)" :disabled="!addToCartButton"><span class="button_main_text u-text-style-main u-weight-bold">[ In den Warenkorb ]</span></button>
+                      {% unless product.available %}    <div aria-disabled="true" li-unless="product.available" li-cloak="hide" class="button_main_element">
+    <span class="button_main_text u-text-style-main u-weight-bold">[ Ausverkauft ]</span>    </div>
+{% endunless %}
+                      <div class="w-embed w-script">
+                        <script>
+(function () {
+  function init() {
+    document.querySelectorAll('[data-product-qty]').forEach(function (c) {
+      if (c.dataset.scriptInitialized) return;
+      c.dataset.scriptInitialized = 'true';
+      var input = c.querySelector('input');
+      var btns = c.querySelectorAll('.product_qty_button');
+      if (!input || btns.length < 2) return;
+      function step(d) {
+        var v = Math.max(1, (parseInt(input.value, 10) || 1) + d);
+        input.value = v;
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+      btns[0].addEventListener('click', function (e) { e.preventDefault(); step(-1); });
+      btns[1].addEventListener('click', function (e) { e.preventDefault(); step(1); });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('shopify:section:load', init);
+})();
+</script>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div data-number="-1" data-wf--typography-paragraph--variant="inherit" class="u-text u-rich-text w-richtext product_fine u-margin-bottom-0">inkl. MwSt., zzgl. Versand · Bis [Datum] bestellt, pünktlich zu Heiligabend · 14 Tage Widerruf</div>
+                <div data-number="-1" data-wf--typography-paragraph--variant="inherit" class="u-text u-rich-text w-richtext product_fine u-margin-bottom-0"> {{ section.settings.richtext_kleingedrucktes }} </div>
               </div>
             </div>
           </div>
@@ -107,6 +133,30 @@
     "tag": "section",
     "name": "Product Main",
     "class": "u-section u-padding-top-sitemargin u-padding-bottom-sitemargin",
+    "settings": [
+        {
+            "id": "html",
+            "type": "html",
+            "default": "\n                  <p>{{ product.title }}<\/p>\n                "
+        },
+        {
+            "id": "text_motiv_zeile",
+            "type": "text",
+            "label": "Motiv Zeile",
+            "default": "Motiv 01 von 05 \u00b7 Ray de la Cruz"
+        },
+        {
+            "id": "richtext",
+            "type": "richtext",
+            "default": "<p>{{ product.description | strip_html }}<\/p>"
+        },
+        {
+            "id": "richtext_kleingedrucktes",
+            "type": "richtext",
+            "label": "Kleingedrucktes",
+            "default": "<p>inkl. MwSt., zzgl. Versand \u00b7 Bis [Datum] bestellt, p\u00fcnktlich zu Heiligabend \u00b7 14 Tage Widerruf<\/p>"
+        }
+    ],
     "presets": [
         {
             "name": "Product Main",

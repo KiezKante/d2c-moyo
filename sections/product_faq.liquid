@@ -11,7 +11,9 @@
                         <path d="M83.247 26.6029C116.715 24.1001 145.851 49.4245 148.295 83.1427C150.74 116.862 125.566 146.182 92.0916 148.604C58.6745 151.021 29.6293 125.714 27.1887 92.0534C24.7486 58.3919 49.8354 29.1017 83.247 26.6029ZM92.6301 122.738C111.966 119.935 125.381 101.867 122.587 82.3905C119.793 62.9137 101.85 49.4105 82.5179 52.2366C63.2016 55.0604 49.8113 73.1179 52.603 92.578C55.3944 112.038 73.3115 125.538 92.6301 122.738Z" fill="currentColor"></path>
                         <path d="M80.9867 0.179528C109.205 -1.20021 122.239 5.14409 138.912 27.1822C125.838 18.8536 111.724 13.2227 96.2932 11.6594C74.8284 9.76963 56.6424 15.2239 38.0515 25.7791C48.3761 9.04791 61.9247 2.59927 80.9867 0.179528Z" fill="currentColor"></path>
                       </svg></div>
-                    <div class="u-eyebrow-text u-text-style-main w-richtext">Fragen und Pflichtangaben</div>
+                    <div class="u-eyebrow-text u-text-style-main w-richtext">
+{{ section.settings.text_faq_eyebrow }}
+</div>
                   </div>
                 </div>
                 <div data-wf--grid--variant="default" data-number="12" class="u-grid-wrapper">
@@ -363,6 +365,14 @@
     "tag": "section",
     "name": "Product FAQ",
     "class": "u-section",
+    "settings": [
+        {
+            "id": "text_faq_eyebrow",
+            "type": "text",
+            "label": "FAQ Eyebrow",
+            "default": "Fragen und Pflichtangaben"
+        }
+    ],
     "presets": [
         {
             "name": "Product FAQ",

@@ -11,13 +11,11 @@
                       <path d="M80.9867 0.179528C109.205 -1.20021 122.239 5.14409 138.912 27.1822C125.838 18.8536 111.724 13.2227 96.2932 11.6594C74.8284 9.76963 56.6424 15.2239 38.0515 25.7791C48.3761 9.04791 61.9247 2.59927 80.9867 0.179528Z" fill="currentColor"></path>
                     </svg></div>
                   <div class="u-eyebrow-text u-text-style-main w-richtext">
-                    <p>Ray de la Cruz</p>
-                  </div>
+{{ section.settings.text_eyebrow }}
+</div>
                 </div>
               </div>
-              <div data-number="20" data-wf--typography-heading--variant="h2" class="u-heading w-variant-433d40c6-c261-f13f-c899-61d2cadf150f w-richtext">
-                <h2>Ray's Arbeiten sprechen für sich.</h2>
-              </div>
+              <div data-number="20" data-wf--typography-heading--variant="h2" class="u-heading w-variant-433d40c6-c261-f13f-c899-61d2cadf150f w-richtext">{{ section.settings.html_arbeiten_headline }} </div>
             </div>
           </div>
           <div data-wf--layout--variant="sticky-left" class="u-layout-wrapper">
@@ -39,6 +37,20 @@
     "tag": "section",
     "name": "Artist Works",
     "class": "u-section u-theme-dark",
+    "settings": [
+        {
+            "id": "text_eyebrow",
+            "type": "text",
+            "label": "Eyebrow",
+            "default": "\n                    <p>Ray de la Cruz<\/p>\n                  "
+        },
+        {
+            "id": "html_arbeiten_headline",
+            "type": "html",
+            "label": "Arbeiten Headline",
+            "default": "\n                <h2>Ray's Arbeiten sprechen f\u00fcr sich.<\/h2>\n              "
+        }
+    ],
     "presets": [
         {
             "name": "Artist Works",

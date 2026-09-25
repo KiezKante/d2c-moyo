@@ -3,43 +3,26 @@
             <div data-large-columns="4" data-medium-columns="4" data-small-columns="2" data-xsmall-columns="1" class="u-grid">
               <div data-wf--content-wrapper--variant="center-mobile" style="" class="u-content-wrapper w-variant-e98b91c1-a8bf-9b6d-a119-f398c9e3f46b">
                 <div class="u-display-contents">
-                  <div data-number="20" data-wf--typography-heading--variant="h5" class="u-heading w-variant-326a9562-3263-06da-e8ef-16981fd70f1c w-richtext">
-                    <h2><strong>Versand</strong></h2>
-                  </div>
-                  <div data-number="30" data-wf--typography-paragraph--variant="text-small" class="u-text w-variant-4099173f-f581-635c-a5fe-cf4a89c62029 u-rich-text w-richtext">
-                    <p>Innerhalb Deutschlands 4,90 €, ab 50 € kostenfrei. 2 bis 4 Werktage</p>
-                  </div>
+                  <div data-number="20" data-wf--typography-heading--variant="h5" class="u-heading w-variant-326a9562-3263-06da-e8ef-16981fd70f1c w-richtext">{{ section.settings.html_versand_titel }} </div>
+                  <div data-number="30" data-wf--typography-paragraph--variant="text-small" class="u-text w-variant-4099173f-f581-635c-a5fe-cf4a89c62029 u-rich-text w-richtext"> {{ section.settings.richtext_versand_text }} </div>
                 </div>
               </div>
               <div data-wf--content-wrapper--variant="center-mobile" style="" class="u-content-wrapper w-variant-e98b91c1-a8bf-9b6d-a119-f398c9e3f46b">
                 <div class="u-display-contents">
-                  <div data-number="20" data-wf--typography-heading--variant="h5" class="u-heading w-variant-326a9562-3263-06da-e8ef-16981fd70f1c w-richtext">
-                    <h2><strong>Rückgabe</strong></h2>
-                  </div>
-                  <div data-number="30" data-wf--typography-paragraph--variant="text-small" class="u-text w-variant-4099173f-f581-635c-a5fe-cf4a89c62029 u-rich-text w-richtext">
-                    <p>14 Tage Widerrufsrecht. Rücksendung auf unsere Kosten.</p>
-                  </div>
+                  <div data-number="20" data-wf--typography-heading--variant="h5" class="u-heading w-variant-326a9562-3263-06da-e8ef-16981fd70f1c w-richtext">{{ section.settings.html_rueckgabe_titel }} </div>
+                  <div data-number="30" data-wf--typography-paragraph--variant="text-small" class="u-text w-variant-4099173f-f581-635c-a5fe-cf4a89c62029 u-rich-text w-richtext"> {{ section.settings.richtext_rueckgabe_text }} </div>
                 </div>
               </div>
               <div data-wf--content-wrapper--variant="center-mobile" style="" class="u-content-wrapper w-variant-e98b91c1-a8bf-9b6d-a119-f398c9e3f46b">
                 <div class="u-display-contents">
-                  <div data-number="20" data-wf--typography-heading--variant="h5" class="u-heading w-variant-326a9562-3263-06da-e8ef-16981fd70f1c w-richtext">
-                    <h2><strong>Akku & Sicherheit</strong></h2>
-                  </div>
-                  <div data-number="30" data-wf--typography-paragraph--variant="text-small" class="u-text w-variant-4099173f-f581-635c-a5fe-cf4a89c62029 u-rich-text w-richtext">
-                    <p>CE-geprüft, Akku nach UN 38.3 zugelassen.</p>
-                  </div>
+                  <div data-number="20" data-wf--typography-heading--variant="h5" class="u-heading w-variant-326a9562-3263-06da-e8ef-16981fd70f1c w-richtext">{{ section.settings.html_akku_titel }} </div>
+                  <div data-number="30" data-wf--typography-paragraph--variant="text-small" class="u-text w-variant-4099173f-f581-635c-a5fe-cf4a89c62029 u-rich-text w-richtext"> {{ section.settings.richtext_akku_text }} </div>
                 </div>
               </div>
               <div data-wf--content-wrapper--variant="center-mobile" style="" class="u-content-wrapper w-variant-e98b91c1-a8bf-9b6d-a119-f398c9e3f46b">
                 <div class="u-display-contents">
-                  <div data-number="20" data-wf--typography-heading--variant="h5" class="u-heading w-variant-326a9562-3263-06da-e8ef-16981fd70f1c w-richtext">
-                    <h2><strong>Fragen?</strong></h2>
-                  </div>
-                  <div data-number="30" data-wf--typography-paragraph--variant="text-small" class="u-text w-variant-4099173f-f581-635c-a5fe-cf4a89c62029 u-rich-text w-richtext">
-                    <p>Wir sind ein kleines Team aus Hamburg, schreib uns an <a href="mailto:moin@moyolamp.com">moin@moyolamp.com</a>
-                    </p>
-                  </div>
+                  <div data-number="20" data-wf--typography-heading--variant="h5" class="u-heading w-variant-326a9562-3263-06da-e8ef-16981fd70f1c w-richtext">{{ section.settings.html_fragen_titel }} </div>
+                  <div data-number="30" data-wf--typography-paragraph--variant="text-small" class="u-text w-variant-4099173f-f581-635c-a5fe-cf4a89c62029 u-rich-text w-richtext"> {{ section.settings.richtext_fragen_text }} </div>
                 </div>
               </div>
             </div>
@@ -48,6 +31,56 @@
     "tag": "section",
     "name": "Home Section 2",
     "class": "u-section u-padding-top-small u-padding-bottom-small u-theme-dark",
+    "settings": [
+        {
+            "id": "html_versand_titel",
+            "type": "html",
+            "label": "Versand Titel",
+            "default": "\n                    <h2><strong>Versand<\/strong><\/h2>\n                  "
+        },
+        {
+            "id": "richtext_versand_text",
+            "type": "richtext",
+            "label": "Versand Text",
+            "default": "<p>Innerhalb Deutschlands 4,90 \u20ac, ab 50 \u20ac kostenfrei. 2 bis 4 Werktage<\/p>"
+        },
+        {
+            "id": "html_rueckgabe_titel",
+            "type": "html",
+            "label": "Rueckgabe Titel",
+            "default": "\n                    <h2><strong>R\u00fcckgabe<\/strong><\/h2>\n                  "
+        },
+        {
+            "id": "richtext_rueckgabe_text",
+            "type": "richtext",
+            "label": "Rueckgabe Text",
+            "default": "<p>14 Tage Widerrufsrecht. R\u00fccksendung auf unsere Kosten.<\/p>"
+        },
+        {
+            "id": "html_akku_titel",
+            "type": "html",
+            "label": "Akku Titel",
+            "default": "\n                    <h2><strong>Akku &amp; Sicherheit<\/strong><\/h2>\n                  "
+        },
+        {
+            "id": "richtext_akku_text",
+            "type": "richtext",
+            "label": "Akku Text",
+            "default": "<p>CE-gepr\u00fcft, Akku nach UN 38.3 zugelassen.<\/p>"
+        },
+        {
+            "id": "html_fragen_titel",
+            "type": "html",
+            "label": "Fragen Titel",
+            "default": "\n                    <h2><strong>Fragen?<\/strong><\/h2>\n                  "
+        },
+        {
+            "id": "richtext_fragen_text",
+            "type": "richtext",
+            "label": "Fragen Text",
+            "default": "<p>Wir sind ein kleines Team aus Hamburg, schreib uns an <a href=\"mailto:moin@moyolamp.com\">moin@moyolamp.com<\/a><\/p>"
+        }
+    ],
     "presets": [
         {
             "name": "Home Section 2",
